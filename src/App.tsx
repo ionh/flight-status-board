@@ -1,9 +1,13 @@
+import StatusBoard from './components/StatusBoard/StatusBoard';
+
 const App = () => {
   return (
-    <main style={{ padding: 32 }}>
+    <main>
       <h1>FLIGHT STATUS BOARD</h1>
-    </main>
-  )
-}
 
-export default App
+      <StatusBoard />
+    </main>
+  );
+};
+
+export default App;
