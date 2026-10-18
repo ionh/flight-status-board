@@ -1,11 +1,11 @@
-import StatusBoard from './components/StatusBoard/StatusBoard';
+import FlightStatusBoard from './components/FlightStatusBoard/FlightStatusBoard';
 
 const App = () => {
   return (
     <main>
-      <h1>FLIGHT STATUS BOARD</h1>
+      <h1>Flight Status Board</h1>
 
-      <StatusBoard />
+      <FlightStatusBoard />
     </main>
   );
 };

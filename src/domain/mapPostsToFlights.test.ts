@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { RawPost } from '../api/fetchPosts';
-import { FLIGHT_STATUSES } from './flight.constants';
-import { mapPostsToFlights } from './mapPostToFlight';
+import { FlightStatusEnum } from './flight.types';
+import { mapPostsToFlights } from './mapPostsToFlights';
 
 const makePost = (overrides: Partial<RawPost> = {}): RawPost => ({
   id: 1,
@@ -46,8 +46,8 @@ describe('mapPostsToFlights', () => {
     const flights = mapPostsToFlights(makeApiResponse());
 
     for (const flight of flights) {
-      expect(FLIGHT_STATUSES).toContain(flight.status);
-      expect(flight.gate).toMatch(/^[A-F]([1-9]|1\d|20)$/); // A1 – F20
+      expect(Object.values(FlightStatusEnum)).toContain(flight.status);
+      expect(flight.gate).toMatch(/^[A-C][1-5]$/); // A1 – C5
       expect(flight.departureTime).toMatch(/^([01]\d|2[0-3]):[0-5][05]$/); // 00:00 – 23:55
     }
   });

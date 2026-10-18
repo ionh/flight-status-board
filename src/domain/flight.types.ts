@@ -1,7 +1,13 @@
-import type { FlightStatusEnum } from './flight.constants';
+// Flight status
+export const FlightStatusEnum = {
+  OnTime: 'OnTime',
+  Delayed: 'Delayed',
+  Cancelled: 'Cancelled',
+} as const;
 
 export type FlightStatus = (typeof FlightStatusEnum)[keyof typeof FlightStatusEnum];
 
+// Flight entity
 export type Flight = {
   id: number;
   flightNumber: string;

@@ -1,0 +1,35 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  table-layout: fixed;
+
+  th,
+  td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  th {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-h);
+    background: var(--accent-bg);
+    border-bottom-color: var(--accent-border);
+  }
+
+  td {
+    color: var(--text-h);
+  }
+
+  tbody tr:hover {
+    background: var(--code-bg);
+  }
+}
+
+.mono {
+  font-family: var(--mono);
+}

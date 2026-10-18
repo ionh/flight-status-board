@@ -1,0 +1,23 @@
+.statusBadge {
+  display: inline-block;
+  padding-inline: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.onTime {
+  color: var(--status-on-time);
+  background: var(--status-on-time-bg);
+}
+
+.delayed {
+  color: var(--status-delayed);
+  background: var(--status-delayed-bg);
+}
+
+.cancelled {
+  color: var(--status-cancelled);
+  background: var(--status-cancelled-bg);
+}

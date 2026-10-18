@@ -7,8 +7,13 @@
   --accent: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --status-on-time: #15803d;
+  --status-on-time-bg: rgba(22, 163, 74, 0.12);
+  --status-delayed: #b45309;
+  --status-delayed-bg: rgba(217, 119, 6, 0.14);
+  --status-cancelled: #b91c1c;
+  --status-cancelled-bg: rgba(220, 38, 38, 0.12);
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -39,12 +44,13 @@
     --accent: #c084fc;
     --accent-bg: rgba(192, 132, 252, 0.15);
     --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
+    --status-on-time: #4ade80;
+    --status-on-time-bg: rgba(74, 222, 128, 0.15);
+    --status-delayed: #fbbf24;
+    --status-delayed-bg: rgba(251, 191, 36, 0.15);
+    --status-cancelled: #f87171;
+    --status-cancelled-bg: rgba(248, 113, 113, 0.15);
   }
 }
 
@@ -74,6 +80,7 @@ h2 {
 h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
+  text-transform: uppercase;
   margin: 32px 0;
   @media (max-width: 1024px) {
     font-size: 36px;
@@ -91,19 +98,4 @@ h2 {
 }
 p {
   margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
 }

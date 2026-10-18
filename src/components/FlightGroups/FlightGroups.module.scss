@@ -1,0 +1,19 @@
+.flightGroup {
+  margin-bottom: 32px;
+}
+
+.title {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: var(--text-h);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.count {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 400;
+}

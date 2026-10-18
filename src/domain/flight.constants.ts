@@ -1,7 +1,7 @@
-export const FlightStatusEnum = {
-  OnTime: 'On Time',
-  Delayed: 'Delayed',
-  Cancelled: 'Cancelled',
-} as const;
+import { FlightStatusEnum, type FlightStatus } from './flight.types';
 
-export const FLIGHT_STATUSES = Object.values(FlightStatusEnum);
+export const FLIGHT_STATUS_LABELS: Record<FlightStatus, string> = {
+  [FlightStatusEnum.OnTime]: 'On time',
+  [FlightStatusEnum.Delayed]: 'Delayed',
+  [FlightStatusEnum.Cancelled]: 'Cancelled',
+};
