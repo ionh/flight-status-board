@@ -7,7 +7,7 @@ type Grouping = {
 };
 
 // Grouping by another field (gate, airline) means adding new keys here.
-export const GROUPING_KEYS = ['terminal'] as const;
+export const GROUPING_KEYS = ['terminal', 'gate'] as const;
 
 export type GroupingKey = (typeof GROUPING_KEYS)[number];
 
@@ -16,6 +16,11 @@ export const GROUPINGS: Record<GroupingKey, Grouping> = {
     name: 'Terminal',
     getKey: (flight) => String(flight.terminal),
     getLabel: (key) => `Terminal ${key}`,
+  },
+  gate: {
+    name: 'Gate',
+    getKey: (flight) => flight.gate,
+    getLabel: (key) => `Gate ${key}`,
   },
 };
 
